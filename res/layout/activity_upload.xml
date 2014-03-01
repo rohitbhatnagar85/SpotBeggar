@@ -2,25 +2,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg2"
     tools:context=".UploadActivity" >
 
-      <Button
+    <TextView
+        android:id="@+id/tv_long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_lat"
+        android:layout_below="@+id/tv_lat"
+        android:layout_marginTop="18dp"
+         android:background="#223388"
+        android:textColor="#ffffff"
+        android:text="longitude" />
+
+    <Button
         android:id="@+id/clickbut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignLeft="@+id/tv_long"
+        android:layout_below="@+id/tv_long"
+        android:layout_marginTop="54dp"
         android:onClick="onClick"
+        android:background="#223388"
+        android:textColor="#ffffff"
         android:text="Click Photo" />
 
-      <ImageView
-          android:id="@+id/imgcurrent"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentTop="true"
-          android:layout_marginTop="29dp"
-          android:layout_toLeftOf="@+id/clickbut"
-          android:src="@drawable/ic_launcher" />
+    <TextView
+        android:id="@+id/tv_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imgcurrent"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="16dp"
+         android:background="#223388"
+        android:textColor="#ffffff"
+        android:text="lattitude" />
+
+    <ImageView
+        android:id="@+id/imgcurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/cb_gen"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/clickbut"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="41dp"
+         android:background="#223388"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@+id/tv_long"
+        android:text="Save" />
+
+    <CheckBox
+        android:id="@+id/cb_gen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/clickbut"
+        android:layout_alignBottom="@+id/clickbut"
+        android:layout_marginLeft="29dp"
+         android:background="#223388"
+        android:textColor="#ffffff"
+        android:layout_toRightOf="@+id/save"
+        android:text="Is Genuine" />
 
 </RelativeLayout>
-   
-

@@ -15,8 +15,9 @@ public final class R {
     }
     public static final class id {
         public static final int clickbut=0x7f070003;
+        public static final int imgcurrent=0x7f070004;
         public static final int loginbut=0x7f070000;
-        public static final int menu_settings=0x7f070004;
+        public static final int menu_settings=0x7f070005;
         public static final int searchbut=0x7f070001;
         public static final int uploadbut=0x7f070002;
     }

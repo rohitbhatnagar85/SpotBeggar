@@ -7,24 +7,30 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-
-public class MainActivity extends Activity {
-
+public class OperationActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		Button login = (Button) findViewById(R.id.loginbut);
-		login.setOnClickListener(new View.OnClickListener() {
+		setContentView(R.layout.activity_oper);
+		Button search = (Button) findViewById(R.id.searchbut);
+		search.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				Log.i("rohit", "clicked");
-				Intent operint = new Intent(MainActivity.this, OperationActivity.class);
+				Log.i("rohit", "search clicked");
+				
+			}
+		});
+		Button upload = (Button) findViewById(R.id.uploadbut);
+		upload.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Log.i("rohit", "upload clicked");
+				Intent operint = new Intent(OperationActivity.this, UploadActivity.class);
 				startActivity(operint);
 			}
 		});
-		
 	}
 
 	@Override
